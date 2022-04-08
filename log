@@ -38,3 +38,20 @@ Fri Apr  8 15:48:13 UTC 2022:
  tests:  1|5
 total_score: 10/70
 eafce58
+Fri Apr  8 16:10:46 UTC 2022: 
+ hashmap.c | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:46:11: error: expected expression before ‘)’ token
+     while(){
+           ^
+hashmap.c:51:25: error: statement with no effect [-Werror=unused-value]
+   map->buckets[posicion]->key
+   ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+hashmap.c:52:3: error: expected ‘;’ before ‘map’
+   map->bucket
+   ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+aa71474
