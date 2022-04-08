@@ -15,3 +15,14 @@ hashmap.c:50:3: error: expected ‘;’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 2ce0b22
+Fri Apr  8 15:47:51 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:43:7: error: unused variable ‘posicion’ [-Werror=unused-variable]
+   int posicion = hash(key,map->capacity);
+       ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+3ffc857

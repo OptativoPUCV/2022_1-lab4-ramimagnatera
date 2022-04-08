@@ -42,19 +42,18 @@ int is_equal(void* key1, void* key2){
 void insertMap(HashMap * map, char * key, void * value) {
   int posicion = hash(key,map->capacity);
 
-  if(key!=NULL){
+  /*if(key!=NULL){
     while(){
       
     }
     map->buckets[posicion]
   }
-
+*/
 }
 
 void enlarge(HashMap * map) {
-    enlarge_called = 1; //no borrar (testing purposes)
-
-
+  enlarge_called = 1; //no borrar (testing purposes)
+  
 }
 
 
