@@ -55,3 +55,9 @@ hashmap.c:52:3: error: expected ‘;’ before ‘map’
 cc1: all warnings being treated as errors
 Compilation failed
 aa71474
+Fri Apr  8 16:11:02 UTC 2022: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+ tests:  1|5
+total_score: 10/70
+7532c44
