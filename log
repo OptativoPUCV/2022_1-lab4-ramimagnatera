@@ -67,3 +67,14 @@ Sun Apr 10 23:04:32 UTC 2022:
  tests:  1|5
 total_score: 10/70
 607417a
+Sun Apr 10 23:05:27 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:55:13: error: operation on ‘map->size’ may be undefined [-Werror=sequence-point]
+   map->size = map->size++;
+   ~~~~~~~~~~^~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+86dc623
