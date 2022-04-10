@@ -78,3 +78,9 @@ hashmap.c:55:13: error: operation on ‘map->size’ may be undefined [-Werror=s
 cc1: all warnings being treated as errors
 Compilation failed
 86dc623
+Sun Apr 10 23:06:15 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|5
+total_score: 20/70
+63b27e0

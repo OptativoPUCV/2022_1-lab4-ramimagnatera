@@ -52,7 +52,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     posicion++;
     
   }
-  map->size = map->size++;
+  map->size = map->size + 1;
   map->current = posicion;
   map->buckets[posicion] = new;
 }
