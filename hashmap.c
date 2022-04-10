@@ -45,17 +45,17 @@ void insertMap(HashMap * map, char * key, void * value) {
   new->key = key;
   new->value = value;
 
-  int posicion = hash(key,map->capacity);
+  int pos = hash(key,map->capacity);
 
-  if(map->buckets[posicion] != NULL && map->buckets[posicion]->key != NULL){
-    while(map->buckets[posicion] != NULL && map->buckets[posicion]->key != NULL){
-      posicion++;
+  if(map->buckets[pos] != NULL && map->buckets[pos]->key != NULL){
+    while(map->buckets[pos] != NULL && map->buckets[pos]->key != NULL){
+      pos++;
     }
   }
   
   map->size++;
-  map->current = posicion;
-  map->buckets[posicion] = new;
+  map->current = pos;
+  map->buckets[pos] = new;
 }
 
 void enlarge(HashMap * map) {
@@ -81,7 +81,7 @@ void eraseMap(HashMap * map,  char * key) {
 Pair * searchMap(HashMap * map,  char * key) {   
 
   int pos = hash(key, map->capacity);
-
+  map->current = pos;
   return map->buckets[pos];
 }
 
