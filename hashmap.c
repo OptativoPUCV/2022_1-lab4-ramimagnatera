@@ -66,9 +66,9 @@ void enlarge(HashMap * map) {
   HashMap* maux = createMap(capacidad);
   
   for(int i = 0 ; i < map->capacity ; i++){
-    if(map->buckets[i] != NULL || map->buckets[i]->key != NULL){
+    //if(map->buckets[i] != NULL || map->buckets[i]->key != NULL){
       insertMap(maux, map->buckets[i]->key, map->buckets[i]->value);
-    }
+    //}
   }
   maux->size = map->size;
 
