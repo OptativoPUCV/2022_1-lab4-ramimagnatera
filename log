@@ -535,3 +535,17 @@ Mon Apr 11 03:59:10 UTC 2022:
  1 file changed, 7 insertions(+), 3 deletions(-)
  tests:  0|0
 958c254
+Mon Apr 11 04:15:00 UTC 2022: 
+ hashmap.c | 13 +++++--------
+ 1 file changed, 5 insertions(+), 8 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:67:9: error: unused variable ‘maux’ [-Werror=unused-variable]
+   Pair* maux = (Pair*) calloc(map->capacity, sizeof(Pair*));
+         ^~~~
+hashmap.c:65:7: error: unused variable ‘capacidad’ [-Werror=unused-variable]
+   int capacidad = map->capacity;
+       ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+edb43d9
