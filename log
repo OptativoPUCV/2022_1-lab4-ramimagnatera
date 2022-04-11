@@ -560,3 +560,9 @@ hashmap.c:67:9: error: unused variable ‘maux’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 df487d7
+Mon Apr 11 04:16:37 UTC 2022: 
+ hashmap.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+ tests:  17|0
+total_score: 70/70
+d1dc082
