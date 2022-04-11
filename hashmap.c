@@ -60,14 +60,12 @@ void insertMap(HashMap * map, char * key, void * value) {
 
 void enlarge(HashMap * map) {
   int capacidad = map->capacity*2;
-  Pair** aux = map->buckets;
-
+  //Pair** aux = map->buckets;
   HashMap* maux = createMap(capacidad);
   
   for(int i = 0; i < map->capacity ; i++){
-
     if(map->buckets[i] != NULL || map->buckets[i]->key != NULL){
-      insertMap(maux, aux[i]->key, aux[i]->value);
+      insertMap(maux, map->buckets[i]->key, map->buckets[i]->value);
     }
   }
   maux->size = map->size;
