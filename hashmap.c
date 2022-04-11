@@ -61,9 +61,9 @@ void insertMap(HashMap * map, char * key, void * value) {
 void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
   
-  int capacidad = map->capacity * 2;
-  
-  HashMap* maux = createMap(capacidad);
+  //int capacidad = map->capacity * 2;
+  map->capacity = map->capacity*2;
+  HashMap* maux = createMap(map->capacity);
   
   for(int i = 0 ; i < map->capacity ; i++){
     if(map->buckets[i] != NULL && map->buckets[i]->key != NULL){
@@ -71,7 +71,7 @@ void enlarge(HashMap * map) {
     }
   }
   maux->size = map->size;
-  map->capacity = map->capacity*2;
+  //map->capacity = map->capacity*2;
 }
 
 HashMap * createMap(long capacity) {
