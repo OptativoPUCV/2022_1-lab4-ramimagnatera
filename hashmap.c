@@ -71,6 +71,8 @@ void enlarge(HashMap * map) {
     }
   }
   maux->size = map->size;
+
+  map = maux;
 }
 
 HashMap * createMap(long capacity) {
