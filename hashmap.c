@@ -88,12 +88,13 @@ Pair * searchMap(HashMap * map,  char * key) {
   int pos = hash(key, map->capacity);
   
   while(map->buckets[pos] != NULL){
+    map->current = pos;
     if(is_equal(map->buckets[pos]->key,key) != 0){
       return map->buckets[pos];
     }
+    pos++;
   }
   
-  map->current = pos;
   return NULL;
 }
 
