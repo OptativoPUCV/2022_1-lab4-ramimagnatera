@@ -113,7 +113,7 @@ Pair * firstMap(HashMap * map) {
 Pair * nextMap(HashMap * map) {
   int pos = map->current;
 
-  if(map->current+1 == map->capacity || map->current == 0){
+  if(map->current+1 == map->capacity){
     return NULL;
   }
   
