@@ -62,7 +62,7 @@ void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
   
   int capacidad = map->capacity * 2;
-  map->capacity = map->capacity*2;
+  
   HashMap* maux = createMap(capacidad);
   
   for(int i = 0 ; i < map->capacity ; i++){
