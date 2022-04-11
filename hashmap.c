@@ -99,10 +99,13 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-  
+  int pos = 0;
 
-  
-  return NULL;
+  while(map->buckets[pos] == NULL){
+    pos++;
+  }
+  map->current = pos;
+  return map->buckets[pos];
 }
 
 Pair * nextMap(HashMap * map) {
