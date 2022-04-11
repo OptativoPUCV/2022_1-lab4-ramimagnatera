@@ -50,10 +50,10 @@ void insertMap(HashMap * map, char * key, void * value) {
   while(map->buckets[pos] != NULL){
     pos++;
   }
-  
+
+  map->buckets[pos] = new;
   map->size++;
   map->current = pos;
-  map->buckets[pos] = new;
 }
 
 void enlarge(HashMap * map) {
