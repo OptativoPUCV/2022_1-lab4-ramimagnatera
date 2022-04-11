@@ -48,7 +48,9 @@ void insertMap(HashMap * map, char * key, void * value) {
   int pos = hash(key,map->capacity);
 
   while(map->buckets[pos] != NULL){
-    pos++;
+    if(pos == map->capacity+1){
+      pos=0;
+    }else  pos++;
   }
 
   map->buckets[pos] = new;
@@ -118,8 +120,6 @@ Pair * nextMap(HashMap * map) {
   while(map->buckets[pos] == NULL || map->buckets[pos]->key == NULL){
     pos++;
   }
-
-
   
   map->current = pos;
   return map->buckets[pos];
