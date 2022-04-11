@@ -48,7 +48,7 @@ void insertMap(HashMap * map, char * key, void * value) {
   int pos = hash(key,map->capacity);
 
   while(map->buckets[pos] != NULL){
-    if(pos == map->capacity+1){
+    if(pos+1 == map->capacity){
       pos=0;
     }else  pos++;
   }
