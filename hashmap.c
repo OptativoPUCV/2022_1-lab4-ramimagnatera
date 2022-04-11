@@ -59,18 +59,19 @@ void insertMap(HashMap * map, char * key, void * value) {
 }
 
 void enlarge(HashMap * map) {
+  enlarge_called = 1; //no borrar (testing purposes)
+  
   int capacidad = map->capacity*2;
   //Pair** aux = map->buckets;
   HashMap* maux = createMap(capacidad);
   
-  for(int i = 0; i < map->capacity ; i++){
+  for(int i = 0 ; i < map->capacity ; i++){
     if(map->buckets[i] != NULL || map->buckets[i]->key != NULL){
       insertMap(maux, map->buckets[i]->key, map->buckets[i]->value);
     }
   }
   maux->size = map->size;
-  
-  enlarge_called = 1; //no borrar (testing purposes)
+
 }
 
 HashMap * createMap(long capacity) {
@@ -132,6 +133,5 @@ Pair * nextMap(HashMap * map) {
   }
   
   map->current = pos;
-  return map->buckets[pos];
-  
+  return map->buckets[pos]; 
 }
