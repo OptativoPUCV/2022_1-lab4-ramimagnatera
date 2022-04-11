@@ -113,9 +113,7 @@ Pair * firstMap(HashMap * map) {
 Pair * nextMap(HashMap * map) {
   int pos = map->current+1;
 
-  if(pos == map->capacity){
-    return NULL;
-  }
+
   
   while(map->buckets[pos] == NULL || map->buckets[pos]->key == NULL){
     pos++;
@@ -123,4 +121,7 @@ Pair * nextMap(HashMap * map) {
   
   map->current = pos;
   return map->buckets[pos];
+  if(map->current == map->capacity-1){
+    return NULL;
+  }
 }
