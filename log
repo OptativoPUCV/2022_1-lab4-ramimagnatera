@@ -391,3 +391,18 @@ hashmap.c:63:10: error: unused variable ‘aux’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 3868b37
+Mon Apr 11 02:56:07 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:70:26: error: ‘*aux’ is a pointer; did you mean to use ‘->’?
+       insertMap(maux, aux->buckets[i]->key, aux->buckets[i]->value);
+                          ^~
+                          ->
+hashmap.c:70:48: error: ‘*aux’ is a pointer; did you mean to use ‘->’?
+       insertMap(maux, aux->buckets[i]->key, aux->buckets[i]->value);
+                                                ^~
+                                                ->
+Compilation failed
+df3773a
