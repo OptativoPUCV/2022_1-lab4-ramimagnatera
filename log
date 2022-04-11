@@ -250,3 +250,9 @@ Mon Apr 11 00:01:10 UTC 2022:
  tests:  8|4
 total_score: 30/70
 84cb5b0
+Mon Apr 11 00:11:48 UTC 2022: 
+ hashmap.c | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+ tests:  10|3
+total_score: 40/70
+5778bcc
