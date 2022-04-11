@@ -117,7 +117,7 @@ Pair * nextMap(HashMap * map) {
     return NULL;
   }
   
-  while(map->buckets[pos] == NULL || map->buckets[pos]->key == NULL){
+  while(map->buckets[pos] == NULL){
     pos++;
   }
   
