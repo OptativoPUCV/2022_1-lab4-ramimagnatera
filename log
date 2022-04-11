@@ -470,3 +470,30 @@ Mon Apr 11 03:50:52 UTC 2022:
  tests:  16|1
 total_score: 60/70
 0c324fa
+Mon Apr 11 03:51:23 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:69:21: error: ‘i’ undeclared (first use in this function)
+     if(map->buckets[i] != NULL && map->buckets[i]->key != NULL){
+                     ^
+hashmap.c:69:21: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c: At top level:
+hashmap.c:73:7: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   maux->size = map->size;
+       ^~
+hashmap.c:75:3: error: data definition has no type or storage class [-Werror]
+   map = maux;
+   ^~~
+hashmap.c:75:3: error: type defaults to ‘int’ in declaration of ‘map’ [-Werror=implicit-int]
+hashmap.c:75:9: error: ‘maux’ undeclared here (not in a function); did you mean ‘map’?
+   map = maux;
+         ^~~~
+         map
+hashmap.c:76:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+11dc5fe
